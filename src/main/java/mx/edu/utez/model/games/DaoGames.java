@@ -94,7 +94,7 @@ public class DaoGames {
             cstm = con.prepareCall("{call sp_create(?,?,?,?)}");
 
             cstm.setString(1, beanGames.getName());
-            cstm.setString(2, beanGames.getImgGame());
+            cstm.setBlob(2, image);
             cstm.setString(3, beanGames.getDatePremiere());
             cstm.setInt(4, beanGames.getCategory_idCategory().getIdCategory());
 
